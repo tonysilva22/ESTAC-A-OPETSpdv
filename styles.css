@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f5f0;
+}
+
+header {
+    background-color: #f1b64e;
+    color: rgb(0, 0, 0);
+    padding: 1em;
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo do cabeçalho */
+}
+
+#logo {
+    max-width: 20%; /* Ajuste o tamanho do logotipo conforme necessário */
+    height: auto;
+    margin-right: 15px; /* Espaço entre o logotipo e o texto */
+}
+
+.header-text {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.5em; /* Ajuste o tamanho da fonte conforme necessário */
+    margin: 0; /* Remove a margem padrão do <h1> */
+}
+
+nav {
+    background-color: #ab6e3f;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    flex: 1;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+}
+
+nav a:hover, nav a.active {
+    background-color: #e49f28;
+}
+
+main {
+    flex: 1;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+form {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0.5em 0 0.2em;
+}
+
+form input, form select {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+div {
+    margin-top: 1em;
+}
+
+#saldoCaixa, #listaVendas, #listaEstoque, #totalFaturamento, #historicoVendas, #faturamentoMeses {
+    margin-top: 1em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+#modalVendas {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+#modalVendasContent {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

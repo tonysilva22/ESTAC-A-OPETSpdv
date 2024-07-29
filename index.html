@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="pet.jpg" type="image/x-icon">
+</head>
+
+
+
+<body>
+    <header>
+        <img id="logo" src="pet.jpg" alt="ESTAÇÃO DOS PETS">
+        <div class="header-text">
+            <h1>ESTAÇÃO DOS PETS PDV</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#abrirCaixa">Abertura de Caixa</a></li>
+            <li><a href="#pdv">PDV</a></li>
+            <li><a href="#estoque">Controle de Estoque</a></li>
+            <li><a href="#registroVendas">Registro de Vendas</a></li>
+            <li><a href="#faturamentoDiario">Faturamento Diário</a></li>
+            <li><a href="#faturamentoMensal">Faturamento Mensal</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="abrirCaixa" class="tab-content">
+            <h2>Abertura de Caixa</h2>
+            <button id="abrirCaixaBtn">Abrir Caixa</button>
+            <div id="saldoInicialDiv"></div>
+        </section>
+        <section id="pdv" class="tab-content">
+            <h2>PDV (Ponto de Venda)</h2>
+            <button id="fecharCaixa">Fechar Caixa</button>
+            <div id="saldoCaixa"></div>
+            <form id="vendaForm">
+                <label for="produto">Produto:</label>
+                <input type="text" id="produto" name="produto" list="produtoLista" required>
+                <datalist id="produtoLista"></datalist>
+                <div id="estoqueDisponivel"></div>
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" required>
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" name="preco" step="0.01" disabled>
+                <label for="dataVenda">Data:</label>
+                <input type="date" id="dataVenda" name="dataVenda" required>
+                <label for="valorRecebido">Valor Recebido:</label>
+                <input type="number" id="valorRecebido" name="valorRecebido" step="0.01" required>
+                <label for="troco">Troco:</label>
+                <input type="number" id="troco" name="troco" step="0.01" disabled>
+                <label for="pagamento">Forma de Pagamento:</label>
+                <select id="pagamento" name="pagamento" required>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="credito">Cartão de Crédito</option>
+                    <option value="debito">Cartão de Débito</option>
+                    <option value="pix">Pix</option>
+                </select>
+                <button type="submit">Registrar Venda</button>
+            </form>
+            <div id="listaVendas"></div>
+        </section>
+        <section id="estoque" class="tab-content">
+            <h2>Controle de Estoque</h2>
+            <form id="estoqueForm">
+                <label for="produtoEstoque">Produto:</label>
+                <input type="text" id="produtoEstoque" name="produtoEstoque" required>
+                <label for="quantidadeEstoque">Quantidade:</label>
+                <input type="number" id="quantidadeEstoque" name="quantidadeEstoque" required>
+                <label for="valorEstoque">Valor:</label>
+                <input type="number" id="valorEstoque" name="valorEstoque" step="0.01" required>
+                <button type="submit">Registrar Mercadoria</button>
+            </form>
+            <div id="listaEstoque"></div>
+        </section>
+        <section id="registroVendas" class="tab-content">
+            <h2>Registro de Vendas</h2>
+            <div id="historicoVendas"></div>
+        </section>
+        <section id="faturamentoDiario" class="tab-content">
+            <h2>Faturamento Diário</h2>
+            <button id="calcularFaturamento">Calcular Faturamento</button>
+            <div id="totalFaturamento"></div>
+        </section>
+        <section id="faturamentoMensal" class="tab-content">
+            <h2>Faturamento dos Últimos Meses</h2>
+            <div id="faturamentoMeses"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
